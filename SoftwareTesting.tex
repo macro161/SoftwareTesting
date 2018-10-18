@@ -1,0 +1,126 @@
+\documentclass[oneside]{VUMIFPSkursinis}
+\usepackage{algorithmicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsfonts}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{subfig}
+\usepackage{ltablex}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{subfig}
+\usepackage{pbox}
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+\renewcommand{\labelenumiii}{\theenumiii}
+\renewcommand{\theenumiii}{\theenumii\arabic{enumiii}.}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage[%
+	colorlinks=true,
+	linkcolor=black
+]{hyperref}
+\university{Vilniaus universitetas}
+\faculty{Matematikos ir informatikos fakultetas}
+\department{Programų sistemų katedra}
+\papertype{Programų sistemų testavimo laboratorinis darbas}
+\title{Internetinės aplikacijos Cronometer testavimas}
+\titleineng{Web appliaction Cronometer testing}
+\status{3 kurso studentas}
+\author{Matas Savickis}
+
+
+\supervisor{Vytautas Valaitis, Asist., Dr.}
+\date{Vilnius – \the\year}
+
+\bibliography{bibliografija}
+\begin{document}
+\maketitle
+
+\sectionnonum{Anotacija}
+Šiuo darbu yra siekiama sukurti testavimo planą, testavimo atvejus ir atlikti testavimą www.cronometer.com  internetinei aplikacijai skirtai sekti maisto informaciją, sporto aktyvumą ir biologinius rodiklius.
+
+\begin{itemize}
+	\item{Matas Savickis - savickis.matas@gmail.com}
+\end{itemize}
+
+\tableofcontents
+
+\section{Testavimo plano indentifikatoriai} CMT-1.1 - pirmas skaičius rodo kelinta funkcionalumą testuosime, antras skaičius rodo kelintą scenarijų testuojame
+\section{Nuorodos}
+	\begin{itemize}
+		\item{https://jmpovedar.files.wordpress.com/2014/03/ieee-829.pdf}
+		\item{http://pst.valaitis.net/PST}
+	\end{itemize}
+\section{Įvadas}
+	Šis testavimo planas yra skirtas internetinės aplikacijos Cronometer testavimui. Pagrindinis testavimo tikslas bus įsitikinti ar su skirtingais įvesties duomenimis programa veikia korektiškai ir gražina korektiškus rezultatus. Bus testuojama maisto pridėjimas, sporto pridėjimas, biometrinių duomenų pridėjimas ir prisijungimas prie tinklalapio. Visas testavimas vyks rankiniu būdu.
+
+\section{Testavimo objektai}
+	\begin{enumerate}
+		\item{www.cronometer.com}
+	\end{enumerate}
+
+\section{Rizikos}
+	\begin{itemize}
+		\item{Nėra programos dokumentacijos}
+		\item{Jeigu kažką užlaušiu ant manęs pyks Cronometer kūrėjai}
+	\end{itemize}
+
+\section{Funkcionalumas kurį testuosime}
+	\begin{enumerate}
+		\item{Registravimasis į tinklalapi}
+		\item{Prisijungimas prie tinklalapio}
+		\item{Maisto vienetų pridėjimas sekimui, įvesties ir išvesties korektiškumas}
+		\item{Sporto sekimo pridėjimas sekimui, įvesties ir išvesties korektiškumas}
+		\item{Biometrinių duomenų pridėjimas į sistemą, įvesties ir išvesties korektiškumas}
+	\end{enumerate}
+\section{Funkcionalumas kurio netestuosime}
+	\begin{enumerate}
+		\item{Premium narystės funkcionalumus - kadangi testavimą atliks biednas studentas kuris neturi pinigų nusipirkti Premium narystės todėl šio funkcionalumo ir netestuosime}
+		\item{Sistemos suderinamumą su išnamiaisiais įrenginiais sekimui(Fitbit) - priežastis ta pati kaip ir Premium narystės atveju}
+		\item{Profilio funkcija - funkcionalumas nekritinis}
+	\end{enumerate}	
+\section{Strategija}
+	\begin{itemize}
+		\item{Specialūs įrankiai - nėra}
+		\item{Apmokymas naudotis įrankiais - nėra}
+		\item{Metrikos - bus sekama kiek laiko užtruko atlikti testavimą, suranstų klaidų skaičius, teisignai praeitų testų skaičius}
+		\item{Metrikos bus sekamos atliekant rankinį testavimą}
+		\item{Konfigūracijos valdymas - nėra}
+		\item{Bus testuojama tik pradinė konfigūracija, kurią pateikia kūrėjai}
+		\item{Bus naudojama stacionarus kompiuteris ir išmanusis telefonas}
+		\item{Bus naudojama Google Chrome naršyklė abiem atvejais(PC ir telefonas)}
+		\item{Regresiniai testai - nėra}
+	\end{itemize}
+
+\section{Praėjimo ir nesekmės kriterijai}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
