@@ -16,6 +16,24 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.}Funkcionalumas kurį testuosime}{2}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.}Funkcionalumas kurio netestuosime}{2}{section.7}
+\contentsline {section}{\numberline {7.}Funkcionalumas kurio netestuosime}{3}{section.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {8.}Strategija}{3}{section.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.}Sėkmės ir nesekmės kriterijai}{3}{section.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10.}Testo nutraukimo criterijai}{3}{section.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.}Testų planai}{4}{section.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12.}Likusios užduotys}{4}{section.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13.}Aplinkos reikalavimai}{4}{section.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {14.}Personalas ir reikalingi apmokymai}{4}{section.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {15.}Atsakomybės}{4}{section.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {16.}Tvarkaraštis}{5}{section.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {17.}Rizikos}{5}{section.17}
