@@ -184,6 +184,8 @@ Testavimas gali būti nesėkmingas dėl testuotojų motyvacijos stokos. Kadangi 
 	\end{enumerate}
 
 \section{Testavimo atvejai}
+
+\iffalse XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \fi
 \begin{center}
     \begin{tabular}{ |p{5cm}|p{13cm}|}
     \hline
@@ -351,6 +353,581 @@ Testavimas gali būti nesėkmingas dėl testuotojų motyvacijos stokos. Kadangi 
 
 \iffalse XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \fi
 
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+    	Testavimo atvejo numeris & CMT-1.2.1\\ \hline
+    	Testavimo atvejis & Sporto veiklos pridėjimas \\ \hline
+	Testavimo atvejo aprašymas & Ištestuoti ar pridedant naują sporto veiklą jos trukmė ir sudegintos kalorijos korektiškai atsivaizduoja pagrindiniame lange    \\ \hline
+	Testavimo eiga &1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD EXERCISE". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš sporto veiklų. 
+				3. Atsidariusiame lange nurodome 30 minučių trukmę.
+				4. Pasižymime kokią kalorijų informaciją mums pateikta. 
+				5. Spaudžiame mygtuką ,,Add Exercise".
+				6. Atsidarius pagrindiniam langui jame patikriname ar sporto veiklos informacija atitinka tą kurią mums nurodė prieš pridedant sporto veiklą.\\ \hline
+	Tikėtasis rezultatas &  Pridėjus naują sporto veiklą pagrindiniame lange sportinės veiklos informacija atitiks tą kuri buvo parodyta pridėjimo lange\\ \hline
+	Gautas Rezultatas & Sporto veikla pridėtas korektiškai  \\ \hline
+	Statusas &  Atlikta\\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+    	Testavimo atvejo numeris & CMT-1.2.2  \\ \hline
+    	Testavimo atvejis & Sporto veiklos informacijos atvaizdavimas dideliais kiekiais  \\ \hline
+	Testavimo atvejo aprašymas & Ištestuoti ar pridedant naują sporto veiklą ir nurodant jai didelę trukmę programa duomenis pateiks ir atvaizduos korektiškai.  \\ \hline
+	Testavimo eiga & 1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD EXERCISE". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš sporto veiklų. 
+				3. Atsidariusiame lange nurodome 2147483648(Int32 MAX + 1) minučių.
+				4. Pasižymime kokią kalorijų sudeginimo informaciją mums pateikė.
+				5. Spaudžiame mygtuką ,,Add Exercise".
+				6. Atsidarius pagrindiniam langui jame patikriname ar sporto veiklos informacija atitinka tą kurią mums nurodė prieš pridedant sporto veiklą.\\ \hline
+	Tikėtasis rezultatas & Programa leis pridėti pasirinktą sporto veiklą su ilga trukme, informacija pagrindiniame lange bus pateikta ir nurodyta korektiškai  \\ \hline
+	Gautas Rezultatas & Bandant pridėti pasirinktą sporto veiklą nurodant 2147483648 minučių trukmę programa to padaryti neleidžia, trukmę automatiškai nusistato į 999999 minutes. Pagrindiniame lange pridėto produkto informacija iškraipo vartotojo sąsajos elementus.  \\ \hline
+	Statusas & Nepraėjo  \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+    	Testavimo atvejo numeris & CMT-1.2.3 \\ \hline
+    	Testavimo atvejis &Sporto veiklos pridėjimas pateikiant neskaitinę informaciją \\ \hline
+	Testavimo apvejo aprašymas & Ištestuoti ar bandant pridėti sporto veiklą pateikiant neskaitinį jo kiekio įvedimą(prie kiekio pateikti ne sakaičiu o raides) programa neleis pridėti sporto veiklos  \\ \hline
+	Testavimo eiga & 1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD EXERCISE". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš sporto veiklų. 
+				3. Atsidariusiame lange į trukėms lauką įvedame ,,test" įvestį
+				4. Pasižymime kokią sudegintų kalorijų informacija mums pateikta.
+				5. Spaudžiame mygtuką ,,Add Serving".\\ \hline
+	Tikėtasis rezultatas & Bandant pridėti sporto veiklą jos trukmę nurodant tekstu programa turi parodyti mums informacinį pranešimą ir neleisti mums pridėti sporto veiklos kol įvestis nebus pakeista į skaitinę įvestį \\ \hline
+	Gautas Rezultatas & Bandant pridėti sporto veiklą nurodant trukme tekstu programa atpažysta, kad įvestis yra nekorektiška ir paryškina įvesties lauką raudonai, tačiau bandant pativirtini pridėjimą paspaudus ,,Add Exercise" programa vistiek prideda sporto veiklą prie sąrašo nurodydama, kad jos trukmė yra 30 minutės. \\ \hline
+	Statusas & Nepraėjo \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+        Testavimo atvejo numeris & CMT-1.2.4  \\ \hline
+        Testavimo atvejis & Sporto veikla nedingsta iš sąrašo perkrovus svetainę  \\ \hline
+        Testavimo atvejo aprašymas & Ištestuoti ar prekrovus svetainę sporto veiklos sąrašo informacija lieka ta pati  \\ \hline
+        Testavimo eiga &  1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD EXERCISE". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš sporto veiklų. 
+				3. Atsidariusiame lange nurodome 30 minučių trukmę.
+				4. Pasižymime kokią sudegintų kalorijų informacija mums pateikta. 
+				5. Spaudžiame mygtuką ,,Add Exercise".
+				6. Atsidarius pagrindiniam langui jame patikriname ar sporto veiklos informacija atitinka tą kurią mums nurodė prieš pridedant sporto veiklą.\\ \hline
+				7. Perkrauname puslapį
+        Tikėtasis rezultatas &  Perkrovus svetainę sporto veiklos informacija pagrindiniame saraše sporto veiklos informacija nepasikeis\\ \hline
+        Gautas Rezultatas & Sporto veiklos informacija po perkrovimo pateikiama korektiškai  \\ \hline
+        Statusas & Atlikta  \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+        Testavimo atvejo numeris & CMT-1.2.5  \\ \hline
+        Testavimo atvejis & Sporto veiklų galime pridėti tiek kiek norime  \\ \hline
+        Testavimo atvejo aprašymas & Ištestuoti ar galima pridėti daugiau negu 100 skirtingų sporto veikų į sąrašą ir pridėjus šiuos produktus informacija bus pateikta korektiškai \\ \hline
+        Testavimo eiga &  1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD EXERCISE". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš sporto veiklų. 
+				3. Atsidariusiame lange nurodome 30 minučių trukmę.
+				4. Pasižymime koka sudegintų kalorijų informacija mums pateikta. 
+				5. Spaudžiame mygtuką ,,Add Exercise".
+				6. Atsidarius pagrindiniam langui jame patikriname ar sporto veiklos informacija atitinka tą kurią mums nurodė prieš pridedant sporto veiklą.\\ \hline
+				7. Kartojame pirmjus 6 žingsnius 101 kartą
+        Tikėtasis rezultatas & Pridėjus daugiau negu 100 skirtingų sporto veiklų tipų informacija bus pateikta korektiškai tiek atvaizdavimo atžvilgiu tiek ir informacijos korektiškumu.\\ \hline
+        Gautas Rezultatas & Pridėjus 101 sporto veiklų vienetą informacija saraše pateikta ir nurodoma korektiškai  \\ \hline
+        Statusas & Atlikta  \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+        Testavimo atvejo numeris &  CMT-1.2.6\\ \hline
+        Testavimo atvejis & Galime pridėti tą pačią sporto veiklą  \\ \hline
+        Testavimo atvejo aprašymas & Ištestuoti ar pridedant tą pačią sporto veiklą prie sąrašo naują įrašą rodo kaip atskirą elementą saraše  \\ \hline
+        Testavimo eiga &  1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD EXERCISE". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš sporto veiklų. 
+				3. Atsidariusiame lange nurodome 30 minučių trukmę.
+				4. Pasižymime kokią sudegintų kalorijų informacija mums pateikta. 
+				5. Spaudžiame mygtuką ,,Add Exercise".
+				6. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD EXERCISE".
+				7. Iš pateikto sąrašo pasirenkame tą pačią sporto veiklą kurią rinkomės 2 veiksme.
+				8. Atsidariusiame lange nurodome 30 minučių trukmę.
+				9. Pasižymime kokią sudegintų kalorijų informacija mums pateikta.
+				10. Spaudžiame mygtuką ,,Add Exercise".
+				11. Pagrindiniame lange patikriname ar ta pati ssporto veikla saraše buvo pridėtas kaip atskiras elementas 
+			\\ \hline
+        Tikėtasis rezultatas &  Du kartus pridėjus tą pačią sporto veiklą pagrindiniame saraše bus atvaizduoti du atskiri sporto veiklos elementai\\ \hline
+        Gautas Rezultatas &  Pridėjus du identiškus sporto veiklos elementus į sąrašą jie saraše buvo atvaizduoti kaip du atskiri elementai korektiškai\\ \hline
+        Statusas & Atlikta \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+        Testavimo atvejo numeris & CMT-1.2.7  \\ \hline
+        Testavimo atvejis & Sporto veiklos trukmės keitimas pagrindiniame lange \\ \hline
+        Testavimo atvejo aprašymas & Ištestuoti ar pakeitus sporto veiklos trukmę pagrindiniame lange jis korektiškai pakeičiamas ir bendra informacija pasikeičia korektiškai \\ \hline
+        Testavimo eiga &  1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD EXERCISE". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš sporto veiklų. 
+				3. Atsidariusiame lange nurodome 30 minučių trukmę.
+				4. Pasižymime kokią sudegintų kalorijų informacija mums pateikta. 
+				5. Spaudžiame mygtuką ,,Add Exercise".
+				6. Pagrindiniame lange paspaudžiam ant sąrašo elemento sporto veiklos trukmės skaičiaus
+				7. Pakeičiame elemento trukmę į 60 minučių
+				8. Patikriname ar sporto veiklos elemento informacija pasikeitė korektiškai
+				9. Patikriname ar bendra sudegintų kalorijų informacija pasikeitė korektiškai\\ \hline
+        Tikėtasis rezultatas &  Pakeitus vieno iš sąrašo elemetų trukmę ji bus korektiškai pakeistas tiek sąrašo elemento informacijoje tiek ir bendroje sudegintų kalorijų informacijoje \\ \hline
+        Gautas Rezultatas & Pakeitus vieno iš sąrašo elementų trukmę visa informacija pasikeitė korektiškai \\ \hline
+        Statusas &  Atlikta\\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\iffalse XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \fi
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+    	Testavimo atvejo numeris & CMT-1.3.1\\ \hline
+    	Testavimo atvejis & Biometrikos pridėjimas \\ \hline
+	Testavimo atvejo aprašymas & Ištestuoti ar pridedant naują biometriką jos reikšmė teisingai pridedama į bendrą sąrašą   \\ \hline
+	Testavimo eiga &1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD BIOMETRIC". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš biometrikų. 
+				3. Atsidariusiame lange nurodome 100 kaip biometrikos reikšmę.
+				4. Spaudžiame mygtuką ,,Add Measurement".
+				5. Atsidarius pagrindiniam langui jame patikriname ar biometrinė informacija atitinka tą kurią nurodėme.\\ \hline
+	Tikėtasis rezultatas &  Pridėjus naują biometriką pagrindiniame lange biometrikos informacija atitiks tą kuri buvome nurodę\\ \hline
+	Gautas Rezultatas & Biometrika pridėta korektiškai  \\ \hline
+	Statusas &  Atlikta\\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+    	Testavimo atvejo numeris & CMT-1.3.2  \\ \hline
+    	Testavimo atvejis & Biometrikos atvaizdavimas nurodant didelias reikšmes  \\ \hline
+	Testavimo atvejo aprašymas & Ištestuoti ar pridedant naują biometriką ir nurodant jai didelę reikšmę programa duomenis pateiks ir atvaizduos korektiškai.  \\ \hline
+	Testavimo eiga & 1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD BIOMETRIC". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš biometrikų. 
+				3. Atsidariusiame lange nurodome 2147483648(Int32 MAX + 1) reikšmę.
+				4. Spaudžiame mygtuką ,,Add Measurement".
+				5. Atsidarius pagrindiniam langui jame patikriname ar biometrikos informacija atitinka tą kurią nurodėme.\\ \hline
+	Tikėtasis rezultatas & Programa leis pridėti pasirinktą sporto veiklą su ilga trukme, informacija pagrindiniame lange bus pateikta ir nurodyta korektiškai  \\ \hline
+	Gautas Rezultatas & Bandant pridėti biometriką nurodant 2147483648 reikšmę programa to padaryti neleidžia, reikšmė automatiškai nusistato į 999999 minutes. Pagrindiniame lange pridėtos biometrikos informacija iškraipo vartotojo sąsajos elementus.  \\ \hline
+	Statusas & Nepraėjo  \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+    	Testavimo atvejo numeris & CMT-1.3.3 \\ \hline
+    	Testavimo atvejis &Biometrikos pridėjimas pateikiant neskaitinę informaciją \\ \hline
+	Testavimo apvejo aprašymas & Ištestuoti ar bandant pridėti biometriką pateikiant neskaitinę jos reikšmę įvedimą(prie reikšmės pateikti ne sakaičiu o raides) programa neleis pridėti biometrikos  \\ \hline
+	Testavimo eiga & 1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD BIOMETRIC". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš biometrikų. 
+				3. Atsidariusiame lange į reikšmės lauką įvedame ,,test" įvestį
+				4. Spaudžiame mygtuką ,,Add Measurement".\\ \hline
+	Tikėtasis rezultatas & Bandant pridėti biometriką jos reikšmę nurodant tekstu programa turi parodyti mums informacinį pranešimą ir neleisti mums pridėti biometrikos kol įvestis nebus pakeista į skaitinę įvestį \\ \hline
+	Gautas Rezultatas & Bandant pridėti biometriką su neteisinga įvestimi programa neleidžia jos pridėti kol įvestis nebus pakeista į skaičių \\ \hline
+	Statusas & Atlikta \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+        Testavimo atvejo numeris & CMT-1.3.4  \\ \hline
+        Testavimo atvejis & Biometrika nedingsta iš sąrašo perkrovus svetainę  \\ \hline
+        Testavimo atvejo aprašymas & Ištestuoti ar prekrovus svetainę biometrikos sąrašo informacija lieka ta pati  \\ \hline
+        Testavimo eiga &  1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD BIOMETRIC". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš biometrikų. 
+				3. Atsidariusiame lange nurodome 100 reikšmę.
+				4. Spaudžiame mygtuką ,,Add Measurement".
+				5. Atsidarius pagrindiniam langui jame patikriname ar biometrikos informacija atitinka tą kurią mes nurodėme\\ \hline
+				6. Perkrauname puslapį
+        Tikėtasis rezultatas &  Perkrovus svetainę biometrikos informacija pagrindiniame saraše biometrikos informacija nepasikeis\\ \hline
+        Gautas Rezultatas & Biometrikos informacija po perkrovimo pateikiama korektiškai  \\ \hline
+        Statusas & Atlikta  \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+        Testavimo atvejo numeris & CMT-1.3.5  \\ \hline
+        Testavimo atvejis & Biometrikų galime pridėti tiek kiek norime  \\ \hline
+        Testavimo atvejo aprašymas & Ištestuoti ar galima pridėti daugiau negu 100 skirtingų biometrikų į sąrašą ir pridėjus šias biometrikas informacija bus pateikta korektiškai \\ \hline
+        Testavimo eiga &  1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD BIOMETRIC". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš biometrikų. 
+				3. Atsidariusiame lange nurodome 100 biometrikos reikšmę.
+				4. Spaudžiame mygtuką ,,Add Measurement".
+				5. Atsidarius pagrindiniam langui jame patikriname ar biometrikos informacija atitinka tą kurią mes nurodėme.\\ \hline
+				6. Kartojame pirmjus 6 žingsnius 101 kartą
+        Tikėtasis rezultatas & Pridėjus daugiau negu 100 skirtingų biometrikos tipų informacija bus pateikta korektiškai tiek atvaizdavimo atžvilgiu tiek ir informacijos korektiškumu.\\ \hline
+        Gautas Rezultatas & Pridėjus 101 biometrikos vienetą informacija saraše pateikta ir nurodoma korektiškai  \\ \hline
+        Statusas & Atlikta  \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+        Testavimo atvejo numeris &  CMT-1.3.6\\ \hline
+        Testavimo atvejis & Galime pridėti tą pačią biometriką \\ \hline
+        Testavimo atvejo aprašymas & Ištestuoti ar pridedant tą pačią biometriką prie sąrašo naują įrašą rodo kaip atskirą elementą saraše  \\ \hline
+        Testavimo eiga &  1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD BIOMETRIC". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš biometrikų. 
+				3. Atsidariusiame lange nurodome 100 biometrikos reikšmę.
+				4. Spaudžiame mygtuką ,,Add Measurement".
+				5. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD BIOMETRIC".
+				6. Iš pateikto sąrašo pasirenkame tą pačią biometriką kurią rinkomės 2 veiksme.
+				7. Atsidariusiame lange nurodome 200 biometrikos reikšmę.
+				8. Spaudžiame mygtuką ,,Add Measurement".
+				9. Pagrindiniame lange patikriname ar ta pati biometriką saraše buvo pridėtas kaip atskiras elementas 
+			\\ \hline
+        Tikėtasis rezultatas &  Du kartus pridėjus tą pačią biometriką pagrindiniame saraše bus atvaizduoti du atskiri biometrikos elementai\\ \hline
+        Gautas Rezultatas &  Pridėjus du identiškus biometrikos elementus į sąrašą jie saraše buvo atvaizduoti kaip du atskiri elementai korektiškai\\ \hline
+        Statusas & Atlikta \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+        Testavimo atvejo numeris & CMT-1.3.7  \\ \hline
+        Testavimo atvejis & Biometrikos reikšmės keitimas pagrindiniame lange \\ \hline
+        Testavimo atvejo aprašymas & Ištestuoti ar pakeitusbiometrikos reikšmę pagrindiniame lange ji korektiškai pakeičiamas ir bendra informacija pasikeičia korektiškai \\ \hline
+        Testavimo eiga &  1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD BIOMETRIC". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš biometrikų. 
+				3. Atsidariusiame lange nurodome 100 biometrikos reikšmę.
+				4. Spaudžiame mygtuką ,,Add Measurement".
+				5. Pagrindiniame lange paspaudžiam ant sąrašo elemento biometrikos reikšmės skaičiaus
+				6. Pakeičiame elemento reikšmę į 200
+				7. Patikriname ar biometrikos elemento informacija pasikeitė korektiškai \\ \hline
+        Tikėtasis rezultatas &  Pakeitus vieno iš sąrašo elemetų reikšmę ji bus korektiškai pakeistas tiek sąrašo elemento informacijoje tiek ir bendroje biometrikos informacijoje \\ \hline
+        Gautas Rezultatas & Pakeitus vieno iš sąrašo elementų reikšmę visa informacija pasikeitė korektiškai \\ \hline
+        Statusas &  Atlikta\\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\iffalse XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \fi
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+    	Testavimo atvejo numeris & CMT-2.1.1\\ \hline
+    	Testavimo atvejis & Maisto produkto pridėjimas \\ \hline
+	Testavimo atvejo aprašymas & Ištestuoti ar pridedant naują maisto produktą jo kiekis ir maistinės naudos specifikacija teisingai pridedama į bendrą maisto sąrašą   \\ \hline
+	Testavimo eiga &1. Pagrindiniame programos lange spaudžiame mygtuką pliuso(+) mygtuką. 
+				2. Atsidaro pasirinkimu meniu kuriame renkamės ,,ADD FOOD"
+				3. Atsidaro sąrašas iš kurio pasirenkame vieną iš maisto pasirinkimų
+				4. Atsidaro langas kuriame nurodome maisto kiekį 100g
+				5. Pasižymime pateiktą maistinę informaciją
+				5. Spaudžiame ,,ADD SERVING"  mygtuką
+				6. Pagrindiniame lange patikriname ar maistas buvo korektiškai pridėtas į sąrašą ir ar bendra maisto informacija atitinkamai pasikeitė \\ \hline
+	Tikėtasis rezultatas &  Pridėjus naują maisto produktą pagrindiniame lange maisto informacija atitiks tą kuri buvo parodyta pridėjimo lange\\ \hline
+	Gautas Rezultatas & Maisto produktas pridėtas korektiškai  \\ \hline
+	Statusas &  Atlikta\\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+    	Testavimo atvejo numeris & CMT-2.1.2  \\ \hline
+    	Testavimo atvejis & Maisto informacijos atvaizdavimas dideliais kiekiais  \\ \hline
+	Testavimo atvejo aprašymas & Ištestuoti ar pridedant naują produktą ir nurodant jam didelius kiekius programa duomenis pateiks ir atvaizduos korektiškai.  \\ \hline
+	Testavimo eiga & 1. Pagrindiniame programos lange spaudžiame mygtuką pliuso(+) mygtuką. 
+				2. Atsidaro pasirinkimu meniu kuriame renkamės ,,ADD FOOD"
+				3. Atsidaro sąrašas iš kurio pasirenkame vieną iš maisto pasirinkimų
+				4. Atsidaro langas kuriame nurodome maisto kiekį 2147483648(Int32 MAX + 1) gramus.
+				5. Pasižymime pateiktą maistinę informaciją
+				6. Spaudžiame ,,ADD SERVING"  mygtuką
+				7. Pagrindiniame lange patikriname ar maistas buvo korektiškai pridėtas į sąrašą ir ar bendra maisto informacija atitinkamai pasikeitė\\ \hline
+	Tikėtasis rezultatas & Programa leis pridėti pasirinktą kiekį maisto, informacija pagrindiniame lange bus pateikta ir nurodyta korektiškai  \\ \hline
+	Gautas Rezultatas & Net ir įvedant labai didelius skaičius programa informacija atvaizduoja korektiškai ir vartotojo sąsaja nebūna iškraipoma. Skaičiai būna atvaizduojami moksliniu formatu(1.2E16) \\ \hline
+	Statusas & Atlikta  \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+    	Testavimo atvejo numeris & CMT-2.1.3 \\ \hline
+    	Testavimo atvejis & Maisto produkto pridėjimas pateikiant neskaitinę informaciją \\ \hline
+	Testavimo apvejo aprašymas & Ištestuoti ar bandant pridėti pridėti maisto produktą pateikiant neskaitinį jo kiekio įvedimą(prie kiekio pateikti ne sakaičiu o raides) aplikacija neleis pridėti produkto  \\ \hline
+	Testavimo eiga & 1. Pagrindiniame programos lange spaudžiame mygtuką pliuso(+) mygtuką. 
+				2. Atsidaro pasirinkimu meniu kuriame renkamės ,,ADD FOOD"
+				3. Atsidaro sąrašas iš kurio pasirenkame vieną iš maisto pasirinkimų
+				4. Atsidaro langas kuriame nurodome maisto kiekį kaip ,,test"
+				5. Aplikacija neleidžia pridėti maisto kol įvesties nepakeičiame į skaitine įvestimi \\ \hline
+	Tikėtasis rezultatas & Bandant pridėti maistą nurodant jo kiekį tekstu aplikacija turi parodyti mums informacinį pranešimą ir neleisti mums pridėti maisto kol įvestis nebus pakeista į skaitinę įvestį \\ \hline
+	Gautas Rezultatas & Pridedant maistą aplikacija neleidžia įvesti teksto, vienintelė galimybė yra vesti skaičius \\ \hline
+	Statusas & Atlikta \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+        Testavimo atvejo numeris & CMT-2.1.4  \\ \hline
+        Testavimo atvejis & Maisto produktas nedingsta iš sąrašo įšjungus ir vėl įjungus aplikaciją  \\ \hline
+        Testavimo atvejo aprašymas & Ištestuoti ar išjungus ir vėl įjungus aplikaciją maisto sąrašo informacija lieka ta pati  \\ \hline
+        Testavimo eiga &  1. Pagrindiniame programos lange spaudžiame mygtuką pliuso(+) mygtuką. 
+				2. Atsidaro pasirinkimu meniu kuriame renkamės ,,ADD FOOD"
+				3. Atsidaro sąrašas iš kurio pasirenkame vieną iš maisto pasirinkimų
+				4. Atsidaro langas kuriame nurodome maisto kiekį 100g
+				5. Pasižymime pateiktą maistinę informaciją
+				5. Spaudžiame ,,ADD SERVING"  mygtuką
+				6. Pagrindiniame lange patikriname ar maistas buvo korektiškai pridėtas į sąrašą ir ar bendra maisto informacija atitinkamai pasikeitė 
+				7. Išjungiame aplikaciją
+				8. Ijungiame aplikaciją
+				9. Pagrindiniame lange patikriname ar infoirmacija apie maisto informacija išliko tokia pati\\ \hline
+        Tikėtasis rezultatas &  Išjungus ir vėl įjungus aplikaciją maisto informacija pagrindiniame saraše maisto informacija nepasikeis\\ \hline
+        Gautas Rezultatas & Maisto informacija po išjungimo ir įjungimo pateikiama korektiškai  \\ \hline
+        Statusas & Atlikta  \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+        Testavimo atvejo numeris & CMT-2.1.5  \\ \hline
+        Testavimo atvejis & Maisto produktų galime pridėti tiek kiek norime  \\ \hline
+        Testavimo atvejo aprašymas & Ištestuoti ar galima pridėti daugiau negu 100 skirtingų maisto vienetų į sąrašą ir pridėjus šiuos produktus informacija bus pateikta korektiškai \\ \hline
+        Testavimo eiga & 1. Pagrindiniame programos lange spaudžiame mygtuką pliuso(+) mygtuką. 
+				2. Atsidaro pasirinkimu meniu kuriame renkamės ,,ADD FOOD"
+				3. Atsidaro sąrašas iš kurio pasirenkame vieną iš maisto pasirinkimų
+				4. Atsidaro langas kuriame nurodome maisto kiekį 100g
+				5. Pasižymime pateiktą maistinę informaciją
+				5. Spaudžiame ,,ADD SERVING"  mygtuką
+				6. Pagrindiniame lange patikriname ar maistas buvo korektiškai pridėtas į sąrašą ir ar bendra maisto informacija atitinkamai pasikeitė 
+				7. Kartojame 1 - 6 žingsnius 101 kartą
+				8. Patikriname ar pagrindiniame ekrane visa informacija atvaizduota korektiškai \\ \hline
+        Tikėtasis rezultatas & Pridėjus daugiau negu 100 skirtingų maisto tipų informacija bus pateikta korektiškai tiek atvaizdavimo atžvilgiu tiek ir informacijos korektiškumu.\\ \hline
+        Gautas Rezultatas & Pridėjus 101 maisto vienetą informacija saraše pateikta ir nurodoma korektiškai  \\ \hline
+        Statusas & Atlikta  \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+        Testavimo atvejo numeris &  CMT-2.1.6\\ \hline
+        Testavimo atvejis & Galime pridėti tą patį maisto produktą  \\ \hline
+        Testavimo atvejo aprašymas & Ištestuoti ar pridedant tą patį maisto produktą prie sąrašo naują įrašą rodo kaip atskirą elementą saraše  \\ \hline
+        Testavimo eiga &  1. Pagrindiniame aplikacijos lange spaudžiame mygtuką pliuso(+) mygtuką. 
+				2. Atsidaro pasirinkimu meniu kuriame renkamės ,,ADD FOOD"
+				3. Atsidaro sąrašas iš kurio pasirenkame vieną iš maisto pasirinkimų
+				4. Atsidaro langas kuriame nurodome maisto kiekį 100g
+				5. Spaudžiame ,,ADD SERVING"  mygtuką
+				6. Pagrindiniame lange patikriname ar maistas buvo korektiškai pridėtas į sąrašą ir ar bendra maisto informacija atitinkamai pasikeitė
+				7. Pakartojame 1 - 6 žingsnius
+				8. Patikriname ar pagrindiniame aplikacijos ekrane buvo pridėti du maisto elementai \\ \hline
+			\\ \hline
+        Tikėtasis rezultatas &  Du kartus pridėjus tą patį maistą pagrindiniame saraše bus atvaizduoti du atskiri maisto elementai\\ \hline
+        Gautas Rezultatas &  Pridėjus du identiškus maisto elementus į sąrašą jie saraše buvo atvaizduoti kaip du atskiri elementai\\ \hline
+        Statusas & Atlikta \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+        Testavimo atvejo numeris & CMT-2.1.7  \\ \hline
+        Testavimo atvejis & Maisto kiekio keitimas pagrindiniame lange \\ \hline
+        Testavimo atvejo aprašymas & Ištestuoti ar pakeitus maisto kiekį pagrindiniame lange jis korektiškai pakeičiamas ir bendra informacija pasikeičia korektiškai \\ \hline
+        Testavimo eiga &  1. Pagrindiniame aplikacijos lange spaudžiame mygtuką pliuso(+) mygtuką. 
+				2. Atsidaro pasirinkimu meniu kuriame renkamės ,,ADD FOOD"
+				3. Atsidaro sąrašas iš kurio pasirenkame vieną iš maisto pasirinkimų
+				4. Atsidaro langas kuriame nurodome maisto kiekį 100g
+				5. Spaudžiame ,,ADD SERVING"  mygtuką
+				6. Pagrindiniame lange patikriname ar maistas buvo korektiškai pridėtas į sąrašą ir ar bendra maisto informacija atitinkamai pasikeitė
+				7. Pagrindiniame lange pasirenkame maisto elementą
+				8. Atsidaro langas kuriame galime pakeisti maisto kiekį
+				9. Pakeičiame maisto kiekį į 200 gramų
+				10. Pagrindiniame lange patikriname ar maisto kiekis buvo pakeistas korektiškai \\ \hline
+        Tikėtasis rezultatas &  Pakeitus vieno iš sąrašo elemetų kiekį jis bus korektiškai pakeistas tiek sąrašo elemento informacijoje tiek ir bendroje maisto informacijoje \\ \hline
+        Gautas Rezultatas & Pakeitus vieno iš sąrašo elementų kiekį visa informacija pasikeitė korektiškai \\ \hline
+        Statusas &  Atlikta\\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+
+\iffalse XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \fi
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+    	Testavimo atvejo numeris & CMT-2.2.1\\ \hline
+    	Testavimo atvejis & Sporto veiklos pridėjimas \\ \hline
+	Testavimo atvejo aprašymas & Ištestuoti ar pridedant naują sporto veiklą jos trukmė ir sudegintos kalorijos korektiškai atsivaizduoja pagrindiniame lange    \\ \hline
+	Testavimo eiga &1. Pagrindiniame aplikacijos lange spaudžiame mygtuką pliuso(+) mygtuką. 
+				2. Atsidaro pasirinkimu meniu kuriame renkamės ,,ADD ACTIVITY"
+				3. Atsidaro sąrašas iš kurio pasirenkame vieną iš sporto veiklų
+				4. Atsidaro langas kuriame nurodome sportavimo laiką
+				5. Mums parodoma sudegintų kalorijų skaičius per pasirinktą laiką
+				5. Spaudžiame ,,ADD EXERCISE"  mygtuką
+				6. Pagrindiniame lange patikriname sporto veikla ir sudegintos kalorijos buvo atvaizduotos teisingai\\ \hline
+	Tikėtasis rezultatas &  Pridėjus naują sporto veiklą pagrindiniame lange sportinės veiklos informacija atitiks tą kuri buvo parodyta pridėjimo lange\\ \hline
+	Gautas Rezultatas & Sporto veikla pridėtas korektiškai  \\ \hline
+	Statusas &  Atlikta\\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+    	Testavimo atvejo numeris & CMT-2.2.2  \\ \hline
+    	Testavimo atvejis & Sporto veiklos informacijos atvaizdavimas dideliais kiekiais  \\ \hline
+	Testavimo atvejo aprašymas & Ištestuoti ar pridedant naują sporto veiklą ir nurodant jai didelę trukmę aplikacija duomenis pateiks ir atvaizduos korektiškai.  \\ \hline
+	Testavimo eiga & 1. Pagrindiniame aplikacijos lange spaudžiame mygtuką pliuso(+) mygtuką. 
+				2. Atsidaro pasirinkimu meniu kuriame renkamės ,,ADD ACTIVITY"
+				3. Atsidaro sąrašas iš kurio pasirenkame vieną iš sporto veiklų
+				4. Atsidaro langas kuriame nurodome sportavimo laiką  2147483648(INT32 MAX + 1) minučių
+				5. Mums parodoma sudegintų kalorijų skaičius per pasirinktą laiką
+				5. Spaudžiame ,,ADD EXERCISE"  mygtuką
+				6. Pagrindiniame lange patikriname sporto veikla ir sudegintos kalorijos buvo atvaizduotos teisingai ir didelis skaičius neįtakojo vartotojo sąsajos\\ \hline
+	Tikėtasis rezultatas & Programa leis pridėti pasirinktą sporto veiklą su ilga trukme, informacija pagrindiniame lange bus pateikta ir nurodyta korektiškai  \\ \hline
+	Gautas Rezultatas & Bandant pridėti pasirinktą sporto veiklą nurodant 2147483648 minučių trukmę aplikaciją duomenis pateikia korektiškai ir vartotojo sąsaja nebūna įtakojama. Su dideliais skaičiais aplikacija naudoja mokslinę notaciją 96E16.  \\ \hline
+	Statusas & Atlikta  \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+    	Testavimo atvejo numeris & CMT-2.2.3 \\ \hline
+    	Testavimo atvejis &Sporto veiklos pridėjimas pateikiant neskaitinę informaciją \\ \hline
+	Testavimo apvejo aprašymas & Ištestuoti ar bandant pridėti sporto veiklą pateikiant neskaitinį jo kiekio įvedimą(prie kiekio pateikti ne sakaičiu o raides) programa neleis pridėti sporto veiklos  \\ \hline
+	Testavimo eiga & 1. Pagrindiniame aplikacijos lange spaudžiame mygtuką pliuso(+) mygtuką. 
+				2. Atsidaro pasirinkimu meniu kuriame renkamės ,,ADD ACTIVITY"
+				3. Atsidaro sąrašas iš kurio pasirenkame vieną iš sporto veiklų
+				4. Atsidaro langas kuriame nurodome sportavimo laiką nurodome kaip ,,test" \\ \hline
+	Tikėtasis rezultatas & Bandant pridėti sporto veiklą jos trukmę nurodant tekstu programa turi parodyti mums informacinį pranešimą ir neleisti mums pridėti sporto veiklos kol įvestis nebus pakeista į skaitinę įvestį \\ \hline
+	Gautas Rezultatas & Aplikacija neleidžia sporto laiko pateikti raidėmi, nes vartotojui atidaroma tik skaičių klaviatūra \\ \hline
+	Statusas & Atlikta \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+        Testavimo atvejo numeris & CMT-2.2.4  \\ \hline
+        Testavimo atvejis & Sporto veikla nedingsta iš sąrašo perkrovus svetainę  \\ \hline
+        Testavimo atvejo aprašymas & Ištestuoti ar prekrovus svetainę sporto veiklos sąrašo informacija lieka ta pati  \\ \hline
+        Testavimo eiga &  1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD EXERCISE". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš sporto veiklų. 
+				3. Atsidariusiame lange nurodome 30 minučių trukmę.
+				4. Pasižymime kokią sudegintų kalorijų informacija mums pateikta. 
+				5. Spaudžiame mygtuką ,,Add Exercise".
+				6. Atsidarius pagrindiniam langui jame patikriname ar sporto veiklos informacija atitinka tą kurią mums nurodė prieš pridedant sporto veiklą.
+				7. Perkrauname puslapį\\ \hline
+        Tikėtasis rezultatas &  Perkrovus svetainę sporto veiklos informacija pagrindiniame saraše sporto veiklos informacija nepasikeis\\ \hline
+        Gautas Rezultatas & Sporto veiklos informacija po perkrovimo pateikiama korektiškai  \\ \hline
+        Statusas & Atlikta  \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+        Testavimo atvejo numeris & CMT-2.2.5  \\ \hline
+        Testavimo atvejis & Sporto veiklų galime pridėti tiek kiek norime  \\ \hline
+        Testavimo atvejo aprašymas & Ištestuoti ar galima pridėti daugiau negu 100 skirtingų sporto veikų į sąrašą ir pridėjus šias veiklas informacija bus pateikta korektiškai \\ \hline
+        Testavimo eiga &  1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD EXERCISE". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš sporto veiklų. 
+				3. Atsidariusiame lange nurodome 30 minučių trukmę.
+				4. Pasižymime kokią sudegintų kalorijų informacija mums pateikta. 
+				5. Spaudžiame mygtuką ,,Add Exercise".
+				6. Patikriname ar informacija išsisaugojo pagrindiniame ekrane
+				7. Kartoti 1 - 6 žingsnius 101 kartų
+        Tikėtasis rezultatas & Pridėjus daugiau negu 100 skirtingų sporto veiklų tipų informacija bus pateikta korektiškai tiek atvaizdavimo atžvilgiu tiek ir informacijos korektiškumu.\\ \hline
+        Gautas Rezultatas & Pridėjus 101 sporto veiklų vienetą informacija saraše pateikta ir nurodoma korektiškai  \\ \hline
+        Statusas & Atlikta  \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+        Testavimo atvejo numeris &  CMT-2.2.6\\ \hline
+        Testavimo atvejis & Galime pridėti tą pačią sporto veiklą  \\ \hline
+        Testavimo atvejo aprašymas & Ištestuoti ar pridedant tą pačią sporto veiklą prie sąrašo naują įrašą rodo kaip atskirą elementą saraše  \\ \hline
+        Testavimo eiga &  1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD EXERCISE". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš sporto veiklų. 
+				3. Atsidariusiame lange nurodome 30 minučių trukmę.
+				4. Pasižymime kokią sudegintų kalorijų informacija mums pateikta. 
+				5. Spaudžiame mygtuką ,,Add Exercise".
+				6. Patikriname ar informacija išsisaugojo pagrindiniame ekrane 
+				7. Pakartojame 1 - 6 žingsnius pridedant identišką sporto veiklą
+				8. Pagrindiniame ekrane patikriname ar antra veikla pridėta kaip atskiras sąrašo elementas \\ \hline
+        Tikėtasis rezultatas &  Du kartus pridėjus tą pačią sporto veiklą pagrindiniame saraše bus atvaizduoti du atskiri sporto veiklos elementai\\ \hline
+        Gautas Rezultatas &  Pridėjus du identiškus sporto veiklos elementus į sąrašą jie saraše buvo atvaizduoti kaip du atskiri elementai korektiškai\\ \hline
+        Statusas & Atlikta \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+        Testavimo atvejo numeris & CMT-2.2.7  \\ \hline
+        Testavimo atvejis & Sporto veiklos trukmės keitimas pagrindiniame lange \\ \hline
+        Testavimo atvejo aprašymas & Ištestuoti ar pakeitus sporto veiklos trukmę pagrindiniame lange jis korektiškai pakeičiamas ir bendra informacija pasikeičia korektiškai \\ \hline
+        Testavimo eiga &  1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD EXERCISE". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš sporto veiklų. 
+				3. Atsidariusiame lange nurodome 30 minučių trukmę.
+				4. Pasižymime kokią sudegintų kalorijų informacija mums pateikta. 
+				5. Spaudžiame mygtuką ,,Add Exercise".
+				6. Pagrindiniame lange paspaudžiam ant sąrašo elemento sporto veiklos trukmės skaičiaus
+				7. Pakeičiame elemento trukmę į 60 minučių
+				8. Patikriname ar sporto veiklos elemento informacija pasikeitė korektiškai
+				9. Patikriname ar bendra sudegintų kalorijų informacija pasikeitė korektiškai\\ \hline
+        Tikėtasis rezultatas &  Pakeitus vieno iš sąrašo elemetų trukmę ji bus korektiškai pakeistas tiek sąrašo elemento informacijoje tiek ir bendroje sudegintų kalorijų informacijoje \\ \hline
+        Gautas Rezultatas & Pakeitus vieno iš sąrašo elementų trukmę visa informacija pasikeitė korektiškai \\ \hline
+        Statusas &  Atlikta\\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\iffalse XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \fi
+
 \section{Defektų aprašas}
 \begin{center}
     \begin{tabular}{ |p{1cm}| p{7cm} | p{7cm} | p{2cm} |}
@@ -358,6 +935,10 @@ Testavimas gali būti nesėkmingas dėl testuotojų motyvacijos stokos. Kadangi 
     Nr &  Funkcionalumas & Aprašymas & Sunkumas \\ \hline
     CMT-1.1.2 & Maisto informacijos atvaizdavimas dideliais kiekiais & Bandant pridėti maisto kiekius didesnius negu 999999 gramų programa pasirinktą kiekį autimatiškai padaro lygiu 999999g. Dėl per didelių skaičių būna iškraipomas programos pagrindinis langas ir informacija parodoma nekorektiškai & Lengvas \\ \hline
     CMT-1.1.3 & Maisto pridėjimas nurodant nekorektišką įvestį & Bandant pridėti maistą su tekstine kiekio įvestimi programa leidžia pridėti maistą automatiškai nurodydama 1 gramą kiekio & Lengvas \\ \hline
+    CMT-1.2.2 & Sporto veiklos informacijos atvaizdavimas dideliais kiekiais & Bandant pridėti sporto veiklą kuri trunka ilgiau negu 999999 minutes programa pasirinktą kiekį automatiškai padaro lygiu 999999 minutėm. Dėl per didelių skaičių būna iškraipomas programos pagrindinis langas ir informacija parodoma nekorektiškai & Lengvas \\ \hline
+    CMT-1.2.3 & Sporto veiklos pridėjimas nurodant nekorektišką įvestį & Bandant pridėti sporto veiklą su tekstine trukmės įvestimi programa leidžia pridėti sporto veiklą automatiškai nurodydama 30 minučių trukmę & Lengvas \\ \hline
+    CMT-1.3.2 & Biometrikos informacijos atvaizdavimas dideliais kiekiais & Bandant pridėti biometrikos informaciją kurios reikšmė didesnė negu 999999 programa pasirinktą kiekį automatiškai padaro lygiu 999999. Dėl per didelių skaičių būna iškraipomas programos pagrindinis langas ir informacija parodoma nekorektiškai & Lengvas \\ \hline
+   
 
 
     \hline

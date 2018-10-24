@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6745 64-bit) (preloaded format=xelatex 2018.9.26)  24 OCT 2018 19:23
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6745 64-bit) (preloaded format=xelatex 2018.9.26)  24 OCT 2018 23:56
 entering extended mode
 **./SoftwareTesting.tex
 (SoftwareTesting.tex
@@ -1354,7 +1354,7 @@ Package biblatex Warning: Conflicting options.
 (biblatex)                'date=iso' requires 'seconds=true'.
 (biblatex)                Setting 'seconds=true' on input line 43.
 
-(SoftwareTesting.aux)
+No file SoftwareTesting.aux.
 \openout1 = `SoftwareTesting.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
@@ -1514,12 +1514,14 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 43.
 LaTeX Info: Redefining \pageref on input line 43.
 LaTeX Info: Redefining \nameref on input line 43.
- (SoftwareTesting.out) (SoftwareTesting.out)
 \@outlinefile=\write5
 \openout5 = `SoftwareTesting.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 45.
 
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 45.
 ("C:\Users\Matas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -1539,90 +1541,201 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--48
 testavimo atvejus ir atlikti testavimą
  []
 
-(SoftwareTesting.toc)
 \tf@toc=\write6
 \openout6 = `SoftwareTesting.toc'.
 
- [1] [2] [3]
+[1] [2] [3]
 Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
 [4]
-Overfull \hbox (25.19995pt too wide) in paragraph at lines 188--204
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 190--206
  [] 
  []
 
 [5]
-Overfull \hbox (25.19995pt too wide) in paragraph at lines 207--223
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 209--225
  [] 
  []
 
 
-Overfull \hbox (25.19995pt too wide) in paragraph at lines 226--241
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 228--243
  [] 
  []
 
 [6]
-Overfull \hbox (25.19995pt too wide) in paragraph at lines 244--261
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 246--263
  [] 
  []
 
 
-Overfull \hbox (25.19995pt too wide) in paragraph at lines 264--281
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 266--283
  [] 
  []
 
 [7]
-Overfull \hbox (25.19995pt too wide) in paragraph at lines 284--306
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 286--308
  [] 
  []
 
 
-Overfull \hbox (25.19995pt too wide) in paragraph at lines 309--328
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 311--330
  [] 
  []
 
 [8]
-Overfull \hbox (25.19995pt too wide) in paragraph at lines 331--350
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 333--352
  [] 
  []
 
 
-Overfull \hbox (0.64726pt too wide) in paragraph at lines 359--359
-[]|\TU/texgyretermes(0)/m/n/12 CMT-
- []
-
-
-Overfull \hbox (0.64726pt too wide) in paragraph at lines 360--360
-[]|\TU/texgyretermes(0)/m/n/12 CMT-
- []
-
-
-Overfull \hbox (21.54715pt too wide) in paragraph at lines 356--365
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 357--373
  [] 
  []
 
 [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 376.
- [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 376.
- (SoftwareTesting.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 376.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 376.
-Package rerunfilecheck Info: File `SoftwareTesting.out' has not changed.
-(rerunfilecheck)             Checksum: CCCF77516105E22A44A71C43850827AB.
-Package logreq Info: Writing requests to 'SoftwareTesting.run.xml'.
-\openout1 = `SoftwareTesting.run.xml'.
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 376--392
+ [] 
+ []
 
- ) 
+
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 395--410
+ [] 
+ []
+
+[10]
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 413--430
+ [] 
+ []
+
+
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 433--450
+ [] 
+ []
+
+[11]
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 453--475
+ [] 
+ []
+
+
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 478--497
+ [] 
+ []
+
+[12]
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 502--517
+ [] 
+ []
+
+
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 520--535
+ [] 
+ []
+
+[13]
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 538--552
+ [] 
+ []
+
+
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 555--571
+ [] 
+ []
+
+[14]
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 574--590
+ [] 
+ []
+
+
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 593--613
+ [] 
+ []
+
+[15]
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 616--633
+ [] 
+ []
+
+
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 638--655
+ [] 
+ []
+
+[16]
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 658--675
+ [] 
+ []
+
+
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 678--693
+ [] 
+ []
+
+[17]
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 696--716
+ [] 
+ []
+
+
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 719--738
+ [] 
+ []
+
+[18]
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 741--760
+ [] 
+ []
+
+
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 763--783
+ [] 
+ []
+
+[19]
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 789--806
+ [] 
+ []
+
+
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 809--826
+ [] 
+ []
+
+[20]
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 829--843
+ [] 
+ []
+
+
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 846--863
+ [] 
+ []
+
+[21]
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.879         Tikėtasis rezultatas &
+                                     Pridėjus daugiau negu 100 skirtingų spo...
+
+? 
+! Emergency stop.
+<recently read> \endtemplate 
+                             
+l.879         Tikėtasis rezultatas &
+                                     Pridėjus daugiau negu 100 skirtingų spo...
+End of file on the terminal!
+
+ 
 Here is how much of TeX's memory you used:
- 31487 strings out of 427798
- 569922 string characters out of 3147828
- 1079848 words of memory out of 3000000
- 35185 multiletter control sequences out of 15000+200000
+ 31474 strings out of 427798
+ 569709 string characters out of 3147828
+ 1081848 words of memory out of 3000000
+ 35184 multiletter control sequences out of 15000+200000
  545616 words of font info for 90 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  67i,11n,96p,1486b,787s stack positions out of 5000i,500n,10000p,200000b,50000s
-
-Output written on SoftwareTesting.pdf (11 pages).
+Output written on SoftwareTesting.pdf (22 pages).
