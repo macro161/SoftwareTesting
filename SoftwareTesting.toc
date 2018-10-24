@@ -4,6 +4,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Anotacija}{1}{section*.1}
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{Testavimo planas}{2}{section*.3}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.}Testavimo plano indentifikatoriai}{2}{section.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.}Nuorodos}{2}{section.2}
@@ -37,3 +39,11 @@
 \contentsline {section}{\numberline {16.}Tvarkaraštis}{5}{section.16}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {17.}Rizikos}{5}{section.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Testavimo atvejai}{5}{section*.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {18.}Įvadas}{5}{section.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {19.}Testavimo atvejai}{6}{section.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {20.}Defektų aprašas}{9}{section.20}

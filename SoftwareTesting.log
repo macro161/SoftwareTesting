@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6745 64-bit) (preloaded format=xelatex 2018.9.26)  18 OCT 2018 19:29
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6745 64-bit) (preloaded format=xelatex 2018.9.26)  24 OCT 2018 19:23
 entering extended mode
 **./SoftwareTesting.tex
 (SoftwareTesting.tex
@@ -1544,37 +1544,85 @@ testavimo atvejus ir atlikti testavimą
 \openout6 = `SoftwareTesting.toc'.
 
  [1] [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
 [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 193.
- [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 193.
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 188--204
+ [] 
+ []
+
+[5]
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 207--223
+ [] 
+ []
+
+
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 226--241
+ [] 
+ []
+
+[6]
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 244--261
+ [] 
+ []
+
+
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 264--281
+ [] 
+ []
+
+[7]
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 284--306
+ [] 
+ []
+
+
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 309--328
+ [] 
+ []
+
+[8]
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 331--350
+ [] 
+ []
+
+
+Overfull \hbox (0.64726pt too wide) in paragraph at lines 359--359
+[]|\TU/texgyretermes(0)/m/n/12 CMT-
+ []
+
+
+Overfull \hbox (0.64726pt too wide) in paragraph at lines 360--360
+[]|\TU/texgyretermes(0)/m/n/12 CMT-
+ []
+
+
+Overfull \hbox (21.54715pt too wide) in paragraph at lines 356--365
+ [] 
+ []
+
+[9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 376.
+ [10]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 376.
  (SoftwareTesting.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 193.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 193.
-
-
-Package rerunfilecheck Warning: File `SoftwareTesting.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `SoftwareTesting.out':
-(rerunfilecheck)             Before: 2DF592FC17DD0603D7E033DE9287E669
-(rerunfilecheck)             After:  A54DE644D6739103ACD9B0E148C51203.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 376.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 376.
+Package rerunfilecheck Info: File `SoftwareTesting.out' has not changed.
+(rerunfilecheck)             Checksum: CCCF77516105E22A44A71C43850827AB.
 Package logreq Info: Writing requests to 'SoftwareTesting.run.xml'.
 \openout1 = `SoftwareTesting.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31488 strings out of 427798
- 569950 string characters out of 3147828
- 1074848 words of memory out of 3000000
- 35186 multiletter control sequences out of 15000+200000
+ 31487 strings out of 427798
+ 569922 string characters out of 3147828
+ 1079848 words of memory out of 3000000
+ 35185 multiletter control sequences out of 15000+200000
  545616 words of font info for 90 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  67i,11n,96p,1486b,787s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on SoftwareTesting.pdf (6 pages).
+Output written on SoftwareTesting.pdf (11 pages).

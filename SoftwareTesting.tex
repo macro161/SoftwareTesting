@@ -52,6 +52,8 @@
 
 \tableofcontents
 
+
+\sectionnonum{Testavimo planas}
 \section{Testavimo plano indentifikatoriai} CMT-1.1.1 - pirmas skaičius rodo ar testavimas buvo atliktas telefonu ar kompiuterius(1 - kompiuteris 2 - telefonas) antras skaičius rodo kelinta funkcionalumą testuosime, trečias skaičius rodo kelintą scenarijų testuojame
 \section{Nuorodos}
 	\begin{itemize}
@@ -168,21 +170,202 @@ Darbas bus atliekamas tokiais žingsniais:
 \section{Rizikos}
 Testavimas gali būti nesėkmingas dėl testuotojų motyvacijos stokos. Kadangi darbas yra neapmokamas, darbai dažniausiai būna atidedami iki paskutinės minutės, kas gali sukelti problemų laiku spėjant pristatyti atliktus darbus. Rizika gali kirti ir dėl to, nes  testuotojas neturės sistemos dokumentacijos ir testo atvejai nebus pilni arba korektiški. Dėl dokumentacijos trūkumo gali nepavykti sugalvoti visų testavimo atvejų.
 
+\sectionnonum{Testavimo atvejai}
+
+\section{Įvadas}
+Šioje dalyje bus pateikti Cronometer internetinės aplikacijos testavimo scenarijai.Šiuo darbu siekiama įsitikinti, kad pagrindiniai aplikacijos funkcionalumai veikia korektiškai tiek naudojantis internetine naršykle tiek mobiliuoju telefonu. Bus testuojamos šios dalys
+	\begin{enumerate}
+		\item{Maisto pridėjimo funkcija internetinėje aplikacijoje}
+		\item{Sporto pridėjimo funkcija internetinėje aplikacijoje}
+		\item{Biometrinių duomenų pridėjimas internetinėje aplikacijoje}
+		\item{Maisto pridėjimo funkcija mobiliojoje aplikacijoje}
+		\item{Sporto pridėjimo funkcija mobiliojoje aplikacijoje}
+		\item{Biometrinių duomenų pridėjimas mobiliojoje aplikacijoje}
+	\end{enumerate}
+
+\section{Testavimo atvejai}
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+    	Testavimo atvejo numeris & CMT-1.1.1\\ \hline
+    	Testavimo atvejis & Maisto produkto pridėjimas \\ \hline
+	Testavimo atvejo aprašymas & Ištestuoti ar pridedant naują maisto produktą jo kiekis ir maistinės naudos specifikacija teisingai pridedama į bendrą maisto sąrašą   \\ \hline
+	Testavimo eiga &1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD FOOD". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš produktų. 
+				3. Atsidariusiame lange nurodome 100g maisto kiekio.
+				4. Pasižymime kokią maisto informacija mums pateikta. 
+				5. Spaudžiame mygtuką ,,Add Serving".
+				6. Atsidarius pagrindiniam langui jame patikriname ar maisto informacija atitinka tą kurią mums nurodė prieš pridedant maistą.\\ \hline
+	Tikėtasis rezultatas &  Pridėjus naują maisto produktą pagrindiniame lange maisto informacija atitiks tą kuri buvo parodyta pridėjimo lange\\ \hline
+	Gautas Rezultatas & Maisto produktas pridėtas korektiškai  \\ \hline
+	Statusas &  Atlikta\\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+    	Testavimo atvejo numeris & CMT-1.1.2  \\ \hline
+    	Testavimo atvejis & Maisto informacijos atvaizdavimas dideliais kiekiais  \\ \hline
+	Testavimo atvejo aprašymas & Ištestuoti ar pridedant naują produktą ir nurodant jam didelius kiekius programa duomenis patetiks ir atvaizduos korektiškai.  \\ \hline
+	Testavimo eiga & 1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD FOOD". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš produktų. 
+				3. Atsidariusiame lange nurodome 2147483648g(Int32 MAX + 1) maisto kiekio.
+				4. Pasižymime kokią maisto informacija mums pateikta.
+				5. Spaudžiame mygtuką ,,Add Serving".
+				6. Atsidarius pagrindiniam langui jame patikriname ar maisto informacija atitinka tą kurią mums nurodė prieš pridedant maistą.\\ \hline
+	Tikėtasis rezultatas & Programa leis pridėti pasirinktą kiekį maisto, informacija pagrindiniame lange bus pateikta ir nurodyta korektiškai  \\ \hline
+	Gautas Rezultatas & Bandant pridėti pasirinkto produkto 2147483648 gramus programa to padaryti neleidžia, kiekis automatiškai nusistato į 999999 gramus. Pagrindiniame lange pridėto produkto informacija iškraipovartotojo sąsajos elementus.  \\ \hline
+	Statusas & Nepraėjo  \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+    	Testavimo atvejo numeris & CMT-1.1.3 \\ \hline
+    	Testavimo atvejis & Maisto produkto pridėjimas pateikiant neskaitinę informaciją \\ \hline
+	Testavimo apvejo aprašymas & Ištestuoti ar bandant pridėti pridėti maisto produktą pateikiant neskaitinį jo kiekio įvedimą(prie kiekio pateikti ne sakaičiu o raides) programa neleis pridėti produkto  \\ \hline
+	Testavimo eiga & 1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD FOOD". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš produktų. 
+				3. Atsidariusiame lange į kiekio lauką įvedame ,,test" įvestį
+				4. Pasižymime kokią maisto informacija mums pateikta.
+				5. Spaudžiame mygtuką ,,Add Serving".\\ \hline
+	Tikėtasis rezultatas & Bandant pridėti maistą nurodant jo kiekį tekstu programa turi parodyti mums informacinį pranešimą ir neleisti mums pridėti maisto kol įvestis nebus pakeista į skaitinę įvestį \\ \hline
+	Gautas Rezultatas & Bandant pridėti maistą nurodant tekstinį kiekį programa atpažysta, kad įvestis yra nekorektiška ir paryškina įvesties lauką raudonai, tačiau bandant pativirtini pridėjimą paspaudus ,,Add Serving" programa vistiek prideda maitą prie sąrašo nurodydama, kad jo pridėjome 1 gramo kiekio. \\ \hline
+	Statusas & Nepraėjo \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+        Testavimo atvejo numeris & CMT-1.1.4  \\ \hline
+        Testavimo atvejis & Maisto produktas nedingsta iš sąrašo perkrovus svetainę  \\ \hline
+        Testavimo atvejo aprašymas & Ištestuoti ar prekrovus svetainę maisto sąrašo informacija lieka ta pati  \\ \hline
+        Testavimo eiga &  1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD FOOD". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš produktų. 
+				3. Atsidariusiame lange nurodome 100g maisto kiekio.
+				4. Pasižymime kokią maisto informacija mums pateikta. 
+				5. Spaudžiame mygtuką ,,Add Serving".
+				6. Atsidarius pagrindiniam langui jame patikriname ar maisto informacija atitinka tą kurią mums nurodė prieš pridedant maistą.\\ \hline
+				7. Perkrauname puslapį
+        Tikėtasis rezultatas &  Perkrovus svetainę maisto informacija pagrindiniame saraše maisto informacija nepasikeis\\ \hline
+        Gautas Rezultatas & Maisto informacija po perkrovimo pateikiama korektiškai  \\ \hline
+        Statusas & Atlikta  \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+        Testavimo atvejo numeris & CMT-1.1.5  \\ \hline
+        Testavimo atvejis & Maisto produktų galime pridėti tiek kiek norime  \\ \hline
+        Testavimo atvejo aprašymas & Ištestuoti ar galima pridėti daugiau negu 100 skirtingų maisto vienetų į sąrašą ir pridėjus šiuos produktus informacija bus pateikta korektiškai \\ \hline
+        Testavimo eiga &  1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD FOOD". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš produktų. 
+				3. Atsidariusiame lange nurodome 100g maisto kiekio.
+				4. Pasižymime kokią maisto informacija mums pateikta. 
+				5. Spaudžiame mygtuką ,,Add Serving".
+				6. Atsidarius pagrindiniam langui jame patikriname ar maisto informacija atitinka tą kurią mums nurodė prieš pridedant maistą.\\ \hline
+				7. Kartojame pirmjus 6 žingsnius 101 kartą
+        Tikėtasis rezultatas & Pridėjus daugiau negu 100 skirtingų maisto tipų informacija bus pateikta korektiškai tiek atvaizdavimo atžvilgiu tiek ir informacijos korektiškumu.\\ \hline
+        Gautas Rezultatas & Pridėjus 101 maisto vienetą informacija saraše pateikta ir nurodoma korektiškai  \\ \hline
+        Statusas & Atlikta  \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+        Testavimo atvejo numeris &  CMT-1.1.6\\ \hline
+        Testavimo atvejis & Galime pridėti tą patį maisto produktą  \\ \hline
+        Testavimo atvejo aprašymas & Ištestuoti ar pridedant tą patį maisto produktą prie sąrašo naują įrašą rodo kaip atskirą elementą saraše  \\ \hline
+        Testavimo eiga &  1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD FOOD". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš produktų. 
+				3. Atsidariusiame lange nurodome 100g maisto kiekio.
+				4. Pasižymime kokią maisto informacija mums pateikta. 
+				5. Spaudžiame mygtuką ,,Add Serving".
+				6. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD FOOD".
+				7. Iš pateikto sąrašo pasirenkame tą patį produktą kurį rinkomės 2 veiksme.
+				8. Atsidariusiame lange nurodome 100g maisto kiekio.
+				9. Pasižymime kokią maisto informacija mums pateikta.
+				10. Spaudžiame mygtuką ,,Add Serving".
+				11. Pagrindiniame lange patikriname ar tas pats maistas saraše buvo pridėtas kaip atskiras elementas 
+			\\ \hline
+        Tikėtasis rezultatas &  Du kartus pridėjus tą patį maistą pagrindiniame saraše bus atvaizduoti du atskiri maisto elementai\\ \hline
+        Gautas Rezultatas &  Pridėjus du identiškus maisto elementus į sąrašą jie saraše buvo atvaizduoti kaip du atskiri elementai\\ \hline
+        Statusas & Atlikta \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+        Testavimo atvejo numeris & CMT-1.1.7  \\ \hline
+        Testavimo atvejis & Maisto kiekio keitimas pagrindiniame lange \\ \hline
+        Testavimo atvejo aprašymas & Ištestuoti ar pakeitus maisto kiekį pagrindiniame lange jis korektiškai pakeičiamas ir bendra informacija pasikeičia korektiškai \\ \hline
+        Testavimo eiga &  1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD FOOD". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš produktų. 
+				3. Atsidariusiame lange nurodome 100g maisto kiekio.
+				4. Pasižymime kokią maisto informacija mums pateikta. 
+				5. Spaudžiame mygtuką ,,Add Serving".
+				6. Pagrindiniame lange paspaudžiam ant sąrašo elemento maisto kiekio skaičiaus
+				7. Pakeičiame elemento kiekį į 200 gramų
+				8. Patikriname ar maisto elemento informacija pasikeitė korektiškai
+				9. Patikriname ar bendra maisto informacija pasikeitė korektiškai\\ \hline
+        Tikėtasis rezultatas &  Pakeitus vieno iš sąrašo elemetų kiekį jis bus korektiškai pakeistas tiek sąrašo elemento informacijoje tiek ir bendroje maisto informacijoje \\ \hline
+        Gautas Rezultatas & Pakeitus vieno iš sąrašo elementų kiekį visa informacija pasikeitė korektiškai \\ \hline
+        Statusas &  Atlikta\\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |p{5cm}|p{13cm}|}
+    \hline
+        Testavimo atvejo numeris & CMT-1.1.8  \\ \hline
+        Testavimo atvejis & Maisto kalorijų keitimas pagrindiniame lange \\ \hline
+        Testavimo atvejo aprašymas & Ištestuoti ar pakeitus maisto kalorijas pagrindiniame lange jis korektiškai pakeičiamas ir bendra informacija pasikeičia korektiškai \\ \hline
+        Testavimo eiga &  1. Pagrindiniame programos lange spaudžiame mygtuką ,,ADD FOOD". 
+				2. Iš pateikto sąrašo pasirenkame vieną iš produktų. 
+				3. Atsidariusiame lange nurodome 100g maisto kiekio.
+				4. Pasižymime kokią maisto informacija mums pateikta. 
+				5. Spaudžiame mygtuką ,,Add Serving".
+				6. Pagrindiniame lange paspaudžiam ant sąrašo elemento maisto kalorijų skaičiaus
+				7. Pakeičiame elemento kalorijas pakeičiame į 100 kalorijų
+				8. Patikriname ar maisto elemento informacija pasikeitė korektiškai
+				9. Patikriname ar bendra maisto informacija pasikeitė korektiškai\\ \hline
+        Tikėtasis rezultatas &  Pakeitus vieno iš sąrašo elemetų kalorijas jis bus korektiškai pakeistas tiek sąrašo elemento informacijoje tiek ir bendroje maisto informacijoje \\ \hline
+        Gautas Rezultatas & Pakeitus vieno iš sąrašo elementų kalorijas visa informacija pasikeitė korektiškai \\ \hline
+        Statusas &  Atlikta\\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
+\iffalse XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \fi
+
+\section{Defektų aprašas}
+\begin{center}
+    \begin{tabular}{ |p{1cm}| p{7cm} | p{7cm} | p{2cm} |}
+    \hline
+    Nr &  Funkcionalumas & Aprašymas & Sunkumas \\ \hline
+    CMT-1.1.2 & Maisto informacijos atvaizdavimas dideliais kiekiais & Bandant pridėti maisto kiekius didesnius negu 999999 gramų programa pasirinktą kiekį autimatiškai padaro lygiu 999999g. Dėl per didelių skaičių būna iškraipomas programos pagrindinis langas ir informacija parodoma nekorektiškai & Lengvas \\ \hline
+    CMT-1.1.3 & Maisto pridėjimas nurodant nekorektišką įvestį & Bandant pridėti maistą su tekstine kiekio įvestimi programa leidžia pridėti maistą automatiškai nurodydama 1 gramą kiekio & Lengvas \\ \hline
+
+
+    \hline
+    \end{tabular}
+\end{center}
+
+
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
