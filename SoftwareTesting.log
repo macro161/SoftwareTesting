@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6745 64-bit) (preloaded format=xelatex 2018.9.26)  25 OCT 2018 17:33
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6745 64-bit) (preloaded format=xelatex 2018.9.26)  30 OCT 2018 23:12
 entering extended mode
 **./SoftwareTesting.tex
 (SoftwareTesting.tex
@@ -1763,78 +1763,117 @@ Overfull \hbox (25.19995pt too wide) in paragraph at lines 1050--1071
  [] 
  []
 
-[26] [27]
-Overfull \hbox (0.64726pt too wide) in paragraph at lines 1080--1080
+[26]
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 1075--1092
+ [] 
+ []
+
+
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 1095--1112
+ [] 
+ []
+
+[27]
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 1115--1132
+ [] 
+ []
+
+
+Overfull \hbox (0.64726pt too wide) in paragraph at lines 1140--1140
 []|\TU/texgyretermes(0)/m/n/12 CMT-
  []
 
 
-Overfull \hbox (0.64726pt too wide) in paragraph at lines 1081--1081
+Overfull \hbox (0.64726pt too wide) in paragraph at lines 1141--1141
 []|\TU/texgyretermes(0)/m/n/12 CMT-
  []
 
 
-Overfull \hbox (0.64726pt too wide) in paragraph at lines 1082--1082
+Overfull \hbox (0.64726pt too wide) in paragraph at lines 1142--1142
 []|\TU/texgyretermes(0)/m/n/12 CMT-
  []
 
 
-Underfull \hbox (badness 1442) in paragraph at lines 1082--1082
+Underfull \hbox (badness 1442) in paragraph at lines 1142--1142
 []|\TU/texgyretermes(0)/m/n/12 Sporto veiklos informacijos atvaizdavi-
  []
 
 
-Overfull \hbox (0.64726pt too wide) in paragraph at lines 1083--1083
+Overfull \hbox (0.64726pt too wide) in paragraph at lines 1143--1143
 []|\TU/texgyretermes(0)/m/n/12 CMT-
  []
 
 
-Overfull \hbox (0.64726pt too wide) in paragraph at lines 1084--1084
+Overfull \hbox (0.64726pt too wide) in paragraph at lines 1144--1144
 []|\TU/texgyretermes(0)/m/n/12 CMT-
  []
 
 
-Underfull \hbox (badness 1448) in paragraph at lines 1084--1084
+Underfull \hbox (badness 1448) in paragraph at lines 1144--1144
 []|\TU/texgyretermes(0)/m/n/12 Bandant pridėti biometrikos informaci-
  []
 
 
-Underfull \hbox (badness 1521) in paragraph at lines 1084--1084
+Underfull \hbox (badness 1521) in paragraph at lines 1144--1144
 \TU/texgyretermes(0)/m/n/12 programa pasirinktą kiekį automatiškai
  []
 
 
-Overfull \hbox (21.54715pt too wide) in paragraph at lines 1077--1090
+Overfull \hbox (21.54715pt too wide) in paragraph at lines 1137--1147
  [] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1102.
 [28]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1102.
+Overfull \hbox (0.64726pt too wide) in paragraph at lines 1151--1151
+[]|\TU/texgyretermes(0)/m/n/12 CMT-
+ []
+
+
+Overfull \hbox (0.64726pt too wide) in paragraph at lines 1152--1152
+[]|\TU/texgyretermes(0)/m/n/12 CMT-
+ []
+
+
+Underfull \hbox (badness 1442) in paragraph at lines 1152--1152
+[]|\TU/texgyretermes(0)/m/n/12 Sporto veiklos informacijos atvaizdavi-
+ []
+
+
+Overfull \hbox (0.64726pt too wide) in paragraph at lines 1153--1153
+[]|\TU/texgyretermes(0)/m/n/12 CMT-
+ []
+
+
+Underfull \hbox (badness 6461) in paragraph at lines 1153--1153
+[]|\TU/texgyretermes(0)/m/n/12 Bandant pridėti biometrikos elementą
+ []
+
+
+Overfull \hbox (21.54715pt too wide) in paragraph at lines 1149--1156
+ [] 
+ []
+
+[29]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1168.
+ [30]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1168.
  (SoftwareTesting.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1102.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1102.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1168.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1168.
 
-
-
-Package rerunfilecheck Warning: File `SoftwareTesting.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `SoftwareTesting.out':
-(rerunfilecheck)             Before: CCCF77516105E22A44A71C43850827AB
-(rerunfilecheck)             After:  09E1CE194D6216A7BC9942F76A3919CE.
+Package rerunfilecheck Info: File `SoftwareTesting.out' has not changed.
+(rerunfilecheck)             Checksum: 09E1CE194D6216A7BC9942F76A3919CE.
 Package logreq Info: Writing requests to 'SoftwareTesting.run.xml'.
 \openout1 = `SoftwareTesting.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31488 strings out of 427798
- 569950 string characters out of 3147828
- 1080848 words of memory out of 3000000
- 35186 multiletter control sequences out of 15000+200000
+ 31487 strings out of 427798
+ 569922 string characters out of 3147828
+ 1081848 words of memory out of 3000000
+ 35185 multiletter control sequences out of 15000+200000
  545616 words of font info for 90 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  67i,11n,96p,1486b,787s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on SoftwareTesting.pdf (29 pages).
+Output written on SoftwareTesting.pdf (31 pages).

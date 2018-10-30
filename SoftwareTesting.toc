@@ -46,6 +46,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {19.}Testavimo atvejai}{6}{section.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {20.}Defektų aprašas}{28}{section.20}
+\contentsline {section}{\numberline {20.}Defektų aprašas}{29}{section.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {21.}Išvada}{28}{section.21}
+\contentsline {section}{\numberline {21.}Išvada}{30}{section.21}
